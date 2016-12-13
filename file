@@ -1,0 +1,5 @@
+u = User.where(id:1).first
+u.password = "@password@"
+u.password_confirmation = "@password@"
+u.save!
+exit
