@@ -9,7 +9,7 @@ sleep 10
 echo "Import Github Jenkins"
 curl -X POST http://@server@:@port@/pluginManager/installNecessaryPlugins -d '<install plugin="github@current" />'
 sleep 30
-someuser=$(cat ./node-jenkins/someuser.groovy)
+someuser=$(cat /home/ubuntu/node-jenkins/someuser.groovy)
 sleep 10
 echo "Reset Password Jenkins"
 curl -d "script=$someuser" http://@server@:@port@/script
